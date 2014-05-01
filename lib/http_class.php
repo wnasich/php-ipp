@@ -64,7 +64,9 @@
  * httpException class
  *
  ************************/
-class httpException extends Exception
+
+namespace PHPIPP;
+class httpException extends \Exception
 {
 	protected $errno;
 

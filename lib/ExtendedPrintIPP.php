@@ -41,6 +41,7 @@
         - ...
 */
 
+namespace PHPIPP;
 require_once("PrintIPP.php");
 
 class ExtendedPrintIPP extends PrintIPP
