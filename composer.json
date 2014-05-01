@@ -12,7 +12,7 @@
 			"email": "donatas.aleksandravicius@pigu.lt"
 		}
 	],
-	"autoload": {
-		"classmap": [ "lib/" ]
-	}
+  "autoload": {
+      "psr-0": {"PHPIPP": "lib/"}
+  }
 }
