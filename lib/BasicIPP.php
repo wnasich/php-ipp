@@ -1841,6 +1841,7 @@ class BasicIPP
 				$this->job_tags[$attribute]['value'][] = self::_integerBuild($value);
 				break;
 
+      case 'boolean':
 			case 'nameWithoutLanguage':
 			case 'nameWithLanguage':
 			case 'textWithoutLanguage':
