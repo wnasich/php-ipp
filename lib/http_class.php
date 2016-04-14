@@ -328,9 +328,13 @@ class http_class
 	{
 		$trace = '';
 		$backtrace = debug_backtrace();
-		foreach ($backtrace as $trace)
+		foreach ($backtrace as $backtrace_item)
 		{
-			$trace .= sprintf("in [file: '%s'][function: '%s'][line: %s];\n", $trace['file'], $trace['function'], $trace['line']);
+			$backtrace_item['file'] = (!isset($backtrace_item['file'])) ? '' : $backtrace_item['file'];
+			$backtrace_item['function'] = (!isset($backtrace_item['function'])) ? '' : $backtrace_item['function'];
+			$backtrace_item['line'] = (!isset($backtrace_item['line'])) ? '' : $backtrace_item['line'];
+
+			$trace .= sprintf("in [file: '%s'][function: '%s'][line: %s];\n", $backtrace_item['file'], $backtrace_item['function'], $backtrace_item['line']);
 		}
 		$msg = sprintf('%s\n%s: [errno: %s]: %s',
 			$trace, error2string($level), $errno, $msg);
