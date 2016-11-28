@@ -1145,7 +1145,8 @@ class BasicIPP
 	protected function _parseHttpHeaders()
 	{
 		$response = "";
-		switch ($this->serveroutput->headers[0])
+		$httpResponseCode = isset($this->serveroutput->headers[0]) ? $this->serveroutput->headers[0] : '';
+		switch ($httpResponseCode)
 		{
 			case "http/1.1 200 ok: ":
 				$this->serveroutput->httpstatus = "HTTP/1.1 200 OK";
