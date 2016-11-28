@@ -922,7 +922,7 @@ class BasicIPP
 			}
 		}
 		$http->Close();
-		return true;
+		return ($success[0] == true);
 	}
 
 	//
