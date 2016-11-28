@@ -60,7 +60,7 @@ class PrintIPP extends BasicIPP
 			return FALSE;
 		}
 
-		if (is_readable($this->data))
+		if (strpos($this->data, '/') === 0 && is_readable($this->data))
 		{
 			self::_putDebug(_("Printing a FILE\n"), 3);
 
