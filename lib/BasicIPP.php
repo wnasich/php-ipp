@@ -147,7 +147,7 @@ class BasicIPP
 
 		date_default_timezone_set($tz);
 		$this->meta = new \stdClass();
-		$this->meta->jobid = 1;
+		$this->meta->jobid = 0;
 		$this->setup = new \stdClass();
 		$this->values = new \stdClass();
 		$this->serveroutput = new \stdClass();
